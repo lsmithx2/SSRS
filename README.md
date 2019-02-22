@@ -4,6 +4,6 @@ Edit file according to what services you wish to check and restart if they crash
 # Cronjob
 You will need to setup a cronjob on your system.
 
-Mine is - */5 * * * * /opt/startifdown.sh >/dev/null 2>&1 <br/>
+Mine is set to check the services every 5 minutes - */5 * * * * /opt/startifdown.sh >/dev/null 2>&1 <br/>
 You can generate your own here - https://crontab-generator.org/
 
