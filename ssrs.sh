@@ -9,6 +9,7 @@ ps -ef | grep apache2 | grep -v grep > /dev/null
 if [ $? != 0 ]
 then
         /etc/init.d/apache2 start > /dev/null
+        mail -s "SSRS APACHE Restart" lee@norfolkoak.com <<< "The apache service on the server has failed and has been restarted by SSRS!"
 fi
 
 # NGINX
@@ -16,6 +17,7 @@ ps -ef | grep nginx | grep -v grep > /dev/null
 if [ $? != 0 ]
 then
        /etc/init.d/nginx start > /dev/null
+       mail -s "SSRS NGINX Restart" lee@norfolkoak.com <<< "The nginx service on the server has failed and has been restarted by SSRS!"
 fi
 
 # PHP7-FPM
@@ -23,6 +25,7 @@ ps -ef | grep php7-fpm | grep -v grep > /dev/null
 if [ $? != 0 ]
 then
        /etc/init.d/php7-fpm start > /dev/null
+       mail -s "SSRS PHP-FPM Restart" lee@norfolkoak.com <<< "The php-fpm service on the server has failed and has been restarted by SSRS!"
 fi
 
 # MYSQL
@@ -30,4 +33,5 @@ ps -ef | grep mysql | grep -v grep > /dev/null
 if [ $? != 0 ]
 then
        /etc/init.d/mysql start > /dev/null
+       mail -s "SSRS MYSQL Restart" lee@norfolkoak.com <<< "The mysql service on the server has failed and has been restarted by SSRS!"
 fi
