@@ -1,6 +1,6 @@
 #!/bin/bash
 # Server Service Restart Script (SSRS)
-# Programmed by LSmithx2
+# Programmed by LSmithx2 (https://lsmithx2.uk/)
 # Restarts required services if they crash
 # Do not modify unless you know what you are changing
 
